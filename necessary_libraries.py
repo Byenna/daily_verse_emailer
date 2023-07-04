@@ -1,8 +1,12 @@
 import datetime
 import requests
+import os
+import base64
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
+from googleapiclient.discovery import build
+
 
 SCOPES = ['https://www.googleapis.com/auth/gmail.send']
   # VERSE_API_URL = 'https://example.com/api/verses'  # Replace with the URL of a verse API
@@ -19,7 +23,7 @@ print(response.text)
 
 SENDER_EMAIL = 'byenna21@gmail.com'             # Replace with your Gmail address
 RECEIVER_EMAIL = 'byenna21@gmail.com'      # Replace with the recipient's Gmail address
-TIME = '23:00'                                   # Specify the time you want to receive the verse
+TIME = '08:00'                                   # Specify the time you want to receive the verse
 
 def main():
        creds = None
